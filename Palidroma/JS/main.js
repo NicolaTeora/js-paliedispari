@@ -15,10 +15,20 @@ btnControl.addEventListener('click', function(){
         b++; 
         wordOriginal.push(wordControlled[i]);
     }
+
     console.log(wordOriginal);
     console.log(b);
-
     
+    b = b -1;
+    //i = 0;
+    while (b >= 0) {
+        wordPalindroma.push(wordOriginal[b]);
+        //i++;
+        b--;
+    }
+    console.log(wordPalindroma);
+
+
 });
 
     
