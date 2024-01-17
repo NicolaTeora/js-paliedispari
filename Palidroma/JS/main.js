@@ -20,10 +20,9 @@ btnControl.addEventListener('click', function(){
     console.log(b);
     
     b = b -1;
-    //i = 0;
+    // 2 in un secondo array mettici le lettere al contrario
     while (b >= 0) {
         wordPalindroma.push(wordOriginal[b]);
-        //i++;
         b--;
     }
     console.log(wordPalindroma);
@@ -31,15 +30,6 @@ btnControl.addEventListener('click', function(){
 
 });
 
-    
-
-//function isPalindroma(word){}
-
-//for (let i = 0; i < array.length; i++) {
-//    const element = array[i];
-//}
-
-// 2 in un secondo array mettici le lettere al crotrario
 //for (let i = 0; i < array.length; i++) {
 //    const element = array[i];
 // 3 unisci il secondo array
