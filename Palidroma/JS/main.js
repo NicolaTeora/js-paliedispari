@@ -27,9 +27,20 @@ btnControl.addEventListener('click', function(){
     }
     console.log(wordPalindroma);
 
+    // 3 unisci il secondo array
+    i = 0;
+
+    let wordReverse = '';
+    while (i < wordPalindroma.length){
+        wordReverse =  wordReverse + wordPalindroma[i];
+        i++;
+    }
+    console.log(wordReverse);
+
+    if (wordControlled === wordReverse) {
+        alert('La parola da te inserita è un palidromo')
+    } else {
+        alert('La parola da te inserita non è un palidromo')
+    }
 
 });
-
-//for (let i = 0; i < array.length; i++) {
-//    const element = array[i];
-// 3 unisci il secondo array
