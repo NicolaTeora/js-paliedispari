@@ -1,13 +1,20 @@
 const inputNumber = document.getElementById('user-number');
 let computerNumber = crateNumberPc();
-let decisionType = getADecision();
+const decisionType = document.getElementById('decision-type').value;
 const goPlay = document.getElementById('play-game');
+let resultType = getADecision();
 
 // Chiedo all'utente se scommette pari o dispari
 function getADecision(){
-    const typeNumber = document.getElementById('decision-type').value;
-    return typeNumber;
+    let selectType 
+    if (decisionType == 'even'){
+        selectType = true;
+    } else {
+        selectType = false;
+    }
+    return selectType;
 }
+
 console.log(decisionType)
 
 //tramite una funzione produco un numero random per il computer
@@ -21,6 +28,10 @@ console.log(computerNumber)
 goPlay.addEventListener('click', function (){
     let numberSelect = parseInt(inputNumber.value);
     console.log(numberSelect)
+
+    if (isNaN(numberSelect)){
+        alert('inserisci un numero')
+    }
 
     let numberEven = numberSelect + computerNumber;    
     console.log(numberEven)
