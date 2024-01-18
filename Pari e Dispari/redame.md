@@ -9,6 +9,7 @@
 
 ### svolgimento:
 - Chiedo all'utente tramite un input di inserire un numero
+- Chiedo all'utente se scommette pari o dispari
 - tramite una <u>funzione</u> produco un numero random per il computer 
-- tramite una <u>funzione</u> faccio la somma dei due numeri e verifico se nono <u>pari</u> o <u>dispari</u>
+- tramite una <u>funzione</u> faccio la somma dei due numeri e verifico se sono <u>pari</u> o <u>dispari</u>
 - dichiaro il vincitore
