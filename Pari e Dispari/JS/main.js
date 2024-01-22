@@ -31,10 +31,10 @@ goPlay.addEventListener('click', function (){
 
     if (isNaN(numberSelect)){
         alert('inserisci un numero')
+    } else if (numberSelect > 5){
+        alert('gioca un numero minore di 5')
     }
 
     let numberEven = numberSelect + computerNumber;    
     console.log(numberEven)
 })
-
-//console.log()
