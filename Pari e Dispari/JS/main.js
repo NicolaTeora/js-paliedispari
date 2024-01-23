@@ -1,40 +1,46 @@
-const inputNumber = document.getElementById('user-number');
-let computerNumber = crateNumberPc();
-const decisionType = document.getElementById('decision-type').value;
-const goPlay = document.getElementById('play-game');
-let resultType = getADecision();
+//pari e dispari
+const btnGame = document.getElementById('button-control');
+const typeGame = document.getElementById('even-or-odd');
+const numberUser = document.getElementById('user-number');
 
-// Chiedo all'utente se scommette pari o dispari
-function getADecision(){
-    let selectType 
-    if (decisionType == 'even'){
-        selectType = true;
+function computerNumber() {
+    let numberMachine = Math.floor(Math.random() * 5) + 1;
+    return numberMachine;
+}
+
+let numberComputer = computerNumber();
+console.log(numberComputer)
+
+function resultGame(numUser, numComp){
+    let resultNumber = numUser + numComp;
+    return resultNumber;
+}
+
+
+btnGame.addEventListener('click', function(){
+    let decisionType = typeGame.value;
+    let gameUser = parseInt(numberUser.value);
+    console.log(decisionType)
+    console.log(gameUser)
+    if (isNaN(gameUser)){
+        alert('non hai inserito un numero');
+        location.reload();
+    } else if (gameUser == ''){
+        alert('non hai inserito un valore');
+        location.reload();
+    } else if (gameUser > 5){
+        alert('inserisci un numero compreso tra 1 e 5!');
+        location.reload();    
+    }
+    
+    winnerIs = resultGame(gameUser, numberComputer);
+    if (winnerIs % 2 == 0){
+        alert('ha vinto il pari!')
+        location.reload();    
     } else {
-        selectType = false;
+        alert('ha vinto il dispari')
+        location.reload();    
     }
-    return selectType;
-}
-
-console.log(decisionType)
-
-//tramite una funzione produco un numero random per il computer
-function crateNumberPc(){
-    let numerRandom = Math.floor(Math.random() * 5) + 1;
-    return numerRandom;
-}
-console.log(computerNumber)
-
-// Chiedo all'utente tramite un input di inserire un numero
-goPlay.addEventListener('click', function (){
-    let numberSelect = parseInt(inputNumber.value);
-    console.log(numberSelect)
-
-    if (isNaN(numberSelect)){
-        alert('inserisci un numero')
-    } else if (numberSelect > 5){
-        alert('gioca un numero minore di 5')
-    }
-
-    let numberEven = numberSelect + computerNumber;    
-    console.log(numberEven)
+    console.log(winnerIs)
+    
 })
